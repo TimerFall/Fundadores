@@ -1,0 +1,66 @@
+/*esto es para que el header quede centrado, aunque tambien provoca que todo el texto que se escriba quede centrado*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+/*esto nose, pero estaba en el style, asi que lo puse, asumo que sirve para que todo quede en la parte de arriba*/
+header {
+    background-color: #000;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+/*esto hace que el logo este a la izquierda, y que este chiquito*/
+.logo img{
+    width: 80px;
+    float: left;
+    margin-left: 20px;
+}
+
+
+
+.contenido-central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.titulo-header {
+    font-size: 24px;
+    margin: 0;
+}
+
+.boton-link {
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.boton-link:hover {
+    background-color: #f2f2f2;
+}
+
+footer {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+table, th, td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}

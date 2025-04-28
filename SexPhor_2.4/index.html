@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Componentes de una Computadora</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <!-- ENCABEZADO CON LOGO -->
+  <header>
+    <!-- Logo a la izquierda -->
+    <div class="logo">
+    <a href="index.html">
+        <img src="img/p.jpg" alt="Logo">
+    </a>
+    </div>
+
+    <!-- Contenido central con título y botón -->
+    <div class="contenido-central">
+    <h1 class="titulo-header">Componentes de una Computadora</h1>
+    <a href="informacion.html" class="boton-link">INFORMACION</a>
+    </div>
+
+    <!-- Espacio vacío a la derecha para que el contenido central quede realmente centrado -->
+    <div class="espacio-derecho"></div>
+</header>
+
+  <!-- INICIO -->
+  <section id="inicio">
+    <img src="img/computadora.jpg" alt="Imagen de computadora" width="400">
+    <p class="pe1">Una computadora está compuesta por diferentes partes fundamentales como la CPU, memoria RAM, almacenamiento, etc.
+      Con una cantidad tan variantes de componentes, es entendible que sea dificil acordarse de todos y todos sus detalles, es por eso que esta pagina esta ideada para aquellos aprendices visuales que requieren
+      de una ayuda extra en el aprendizaje primerizo de aquellas partes de nuestras pc que nos permiten acceder al conocimiento humano, que nos ayudan a calcular más rapido, que nos ayudan a entretenernos,
+      a conocer gente, o a ser mejores personas.
+    </p>
+  </section>
+
+  <!-- INFORMACIÓN -->
+  <section id="informacion" style="display: none;">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Componente</th>
+          <th>Función</th>
+          <th>Marca</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaCuerpo">
+        <!-- Filas dinámicas -->
+      </tbody>
+    </table>
+    <button onclick="mostrarFormulario()">AGREGAR</button>
+  </section>
+
+  <!-- INFORMACION2-->>
+  <section id="informaciondos" style="display: none;">
+    <table b
+    order="1">
+      <table>
+
+        <tr>
+          <th>Componente</th>
+          <th>Función</th>
+          <th>Marca</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaCuerpo">
+        <!-- Filas dinámicas -->
+      </tbody>
+    </table>
+    <button onclick="mostrarFormulario()">AGREGAR</button>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section id="formulario" style="display: none;">
+    <h2 id="formTitulo">Agregar Componente</h2>
+    <form onsubmit="guardarFila(event)">
+      <input type="text" id="componente" placeholder="Componente" required><br>
+      <input type="text" id="funcion" placeholder="Función" required><br>
+      <input type="text" id="marca" placeholder="Marca" required><br>
+      <input type="number" id="precio" placeholder="Precio" required><br>
+      <button type="submit">Guardar</button>
+    </form>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p class="pe2">RT - TC - NP - JM - SexPhor &reg;</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+</body>
+</html>
