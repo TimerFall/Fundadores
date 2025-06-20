@@ -1,0 +1,62 @@
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <body>
+        <script src="eje3.js"></script>
+        <button onclick="alternarFondo()" id="miBot"> cambiar fondo </button>
+        <!--cambia el color del fondo al apretar el boton-->
+        <script>
+            function alternarFondo() {
+                let colorActual = document.body.style.backgroundColor;
+                if (colorActual === "red") {
+                    document.body.style.backgroundColor = "white";
+                } else {
+                    document.body.style.backgroundColor = "red";
+                }
+            }
+        </script>
+        <!--cambia el color del fondo del boton al pasar el cursor por encima-->
+        <script>
+            let bot = document.getElementById('miBot');
+            //me estaba aburriendo e hice que cambie de color en lugar de una alerta, pero la alerta seria lo mismo cambiando lo de bot.style... por un alert("")
+            bot.addEventListener('mouseover', function() {bot.style.backgroundColor = 'blue'});
+            bot.addEventListener('mouseout', function() {bot.style.backgroundColor = 'white'})
+        </script>
+
+        <!--cambia un elemento al apretar alguna tecla-->
+        <p id="texto">presiona cualquier tecla para cambiar esto</p>
+        <script>
+            document.addEventListener('keydown', function(event) {
+                document.getElementById('texto').textContent = `has presionado la tecla: ${event.key}`;
+            })
+        </script>
+
+        <!--Crear una función para realizar una suma entre dos números ingresados por el usuario.-->
+        <button onclick="pedirysumarNum()"> numeros </button>
+        <script>
+            function pedirysumarNum() {
+                let num1 = prompt("ingrese un numero");
+                let num2 = prompt("ingrese otro numero");
+                let num3 = Number(num1) + Number(num2);
+                alert(num3);
+            }
+        </script>
+
+        <!--Boton de confirmacion-->
+        <button onclick="confirmacion()"> confirmación </button>
+        <script>
+            function confirmacion() {
+                let respuesta = prompt("desea realmente hacer esto?");
+                if (respuesta === "si") {
+                    alert("esta bien, son tus decisiones y tu vida");
+                } else if (respuesta === "no") {
+                    alert("Entonces no hagas click!");
+                } else {
+                    alert("lo siento, no contesto como el codigo esperaba")
+                }
+            }
+        </script>
+
+    </body>
+</html>
